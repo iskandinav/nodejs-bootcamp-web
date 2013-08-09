@@ -31,12 +31,12 @@ $(document).ready(function(){
 
 //Nivo slider
 $('#slider').nivoSlider({
-        effect:'random', // Specify sets like: 'fold,fade,sliceDown' or choose 'random' for mixed effects
+        effect:'fade', // Specify sets like: 'fold,fade,sliceDown' or choose 'random' for mixed effects
         slices:15, // For slice animations
         boxCols: 8, // For box animations
         boxRows: 4, // For box animations
         animSpeed:500, // Slide transition speed
-        pauseTime:5000, // How long each slide will show
+        pauseTime:3000, // How long each slide will show
 		pauseOnHover:true,
        directionNav:true, // Next & Prev navigation
         directionNavHide:true, // Only show on hover
