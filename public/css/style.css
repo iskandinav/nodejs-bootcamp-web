@@ -422,6 +422,22 @@ border-radius: 160px;
 	padding: 30px 0;
 	display: inline-block;
 }
+
+#agenda p, #agenda span {
+	color: black;
+	line-height: 20px;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+#agenda .theory {
+	background-color: #CDD5F0;
+}
+
+#agenda .practice {
+	background-color: #DABED3;
+}
+
 table {
 	border-collapse:collapse;
 	width: 364px;
@@ -470,8 +486,13 @@ line-height: 30px;
 	width: 50%;
 }
 
+.pricing {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
 .pricing .legend {
-	margin: 10px;
+	margin: 35px;
+	font-size: 12px;
 }
 
 table .highlight {
@@ -599,4 +620,14 @@ font-size: 14px;
 
 #quotes .icon-quote-left {
 	position: absolute;
+}
+
+#sponsors li {
+	width: 33%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#sponsors img {
+	max-width: 100%;
 }
