@@ -2,6 +2,33 @@
 
 $(document).ready(function(){
 
+  var options = {
+    center: new google.maps.LatLng(-31.41855566348544,-64.18422102928162),
+    zoom: 14,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    scrollwheel: false,
+    mapTypeControlOptions: {
+        mapTypeIds: ["Toner", "Terrain", "Watercolor"]
+    }
+  };
+  var map = new google.maps.Map(document.getElementById("map"), options);
+  map.mapTypes.set("terrain", new google.maps.StamenMapType("toner"));
+  var myMarker = false;
+  point = new google.maps.LatLng(-31.41855566348544,-64.18422102928162);
+  var marker = new google.maps.Marker({
+        position: point,
+        title:'Test',
+        animation: google.maps.Animation.DROP,
+        map: map
+  });
+  var placeInfo = '<div class="pinContent"><p>Gran Hotel Dor&aacute;, Entre Rios 70, Cordoba</p><p><a href="http://goo.gl/maps/k6Fjg" target="_blank">Abrir en Google Maps &raquo;</a></p></div>';
+  var placeWindow = new google.maps.InfoWindow({
+      content: placeInfo
+  });
+  google.maps.event.addListener(marker, 'click', function() {
+      placeWindow.open(map,marker);
+  });
+
 //Nivo slider
 $('#slider').nivoSlider({
         effect:'fade', // Specify sets like: 'fold,fade,sliceDown' or choose 'random' for mixed effects
